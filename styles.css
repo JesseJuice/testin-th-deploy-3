@@ -1,0 +1,538 @@
+@import url('https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Prompt', sans-serif;
+}
+
+*:focus {
+    outline: 0 !important;
+}
+
+.main-content{
+    padding-left: 0;
+    padding-right: 0;
+}
+
+#myAudio{
+    z-index: 2;
+}
+
+.background {
+    background-image: url("assets/ID-67_PNG3.webp"); 
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+
+.container-fluid{
+    height: 100%;
+    width: 100%;
+
+}
+
+.main-content{
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.child1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px;
+    
+}
+
+.first-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.lucky-win{
+    height: 320px;
+}
+
+.child2{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    bottom: 600px;
+    margin: 5px;
+}
+
+.roulette-stage{
+    position: absolute;
+    height: 610px;
+    width: auto;
+}
+
+.roulette-spining{
+    position: absolute;
+    height: 400px;
+    width: auto;
+
+    /** for the animation **/
+    -webkit-animation:spin 7s linear infinite;
+    -moz-animation:spin 7s linear infinite;
+    animation:spin 7s linear infinite;
+}
+
+@-moz-keyframes spin { 100% { -moz-transform: rotate(2600deg); } }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(2600deg); } }
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(2600deg); } }
+                /** Start coding at 2400px **/
+.child3{
+    position: absolute;
+    bottom: 0px;
+    right: 262px;
+    margin: 5px;
+}
+
+.model-girl{
+    height: 600px;
+    width: auto;
+    
+}
+
+#wheel-gif{
+
+}
+
+.button {
+    position: absolute;
+    border-radius: 5px;
+    width: 275px;
+    height: 55px;
+    position: absolute;
+    font-weight: 700;
+    background-color: transparent;
+    padding: 2px;
+    outline: none;
+    border: none;
+    bottom: 132px;
+    cursor: pointer;
+    transition: box-shadow 0.25s;
+    color: #16110b !important;
+}
+
+.button:hover{
+box-shadow: 0px 0px 5px 4px rgba(0,0,0,0.58) inset;
+-webkit-box-shadow: 0px 0px 5px 4px rgba(0,0,0,0.58)inset;
+-moz-box-shadow: 0px 0px 5px 4px rgba(0,0,0,0.58) inset;
+}
+
+.inner-button{
+    height: 95%;
+    border-radius: 2px;
+    padding-top: 8.5px;
+    font-size: 20px;
+    border: none;
+    color: #16110b !important;
+}
+
+.outer-button-gold-gradient{
+    background: linear-gradient(to left, rgb(212, 153, 34) 10%, rgb(224, 188, 56) 30%, rgb(255, 242, 164) 70%, rgb(255, 242, 164) 70%);
+    transition: box-shadow 0.25s;
+}
+
+.outer-button-gold-gradient:hover{
+box-shadow: 0px 0px 5px 4px rgba(0,0,0,0.58) inset;
+-webkit-box-shadow: 0px 0px 5px 4px rgba(0,0,0,0.58)inset;
+-moz-box-shadow: 0px 0px 5px 4px rgba(0,0,0,0.58) inset;
+}
+
+.inner-button-gold-gradient{
+    background: linear-gradient(to right, rgb(212, 153, 34) 10%, rgb(224, 188, 56) 30%, rgb(255, 242, 164) 70%, rgb(255, 242, 164) 70%);
+}
+
+
+
+/** Modal CSS **/
+    #overlayDiv{
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.7);
+    }
+
+    #overlayDiv2{
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.7);
+        visibility: hidden;
+    }
+/** Modal CSS **/
+
+/** modal images **/
+
+.span-color{
+    position: absolute;
+    top: -5px;
+    right: 7px;
+
+}
+
+.remove {
+    width: 20px;
+    height: 20px;
+    margin-top: 19px;
+    margin-right: 9px;
+}
+
+.modal-content {
+    overflow: hidden;
+  }
+
+
+  .modal-header {
+    border-radius: 0;
+  }
+
+
+.modal-content {
+    background: linear-gradient(to bottom, rgb(212, 153, 34) 10%, rgb(224, 188, 56) 30%, rgb(255, 242, 164) 70%, rgb(255, 242, 164) 70%);
+    margin:20px 10px 0 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-origin: border-box;
+    z-index: -1;
+    outline: 0;
+    box-shadow: 4px 5px 10px 1px rgb(231 184 70 / 75%);
+    -webkit-box-shadow: 4px 5px 10px 1px rgb(231 184 70 / 75%);
+    -moz-box-shadow: 4px 5px 10px 1px rgba(231,184,70,0.75);
+}
+
+
+.modal-header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    padding: 1rem;
+    border-bottom: 1px solid #e9ecef;
+    border-top-left-radius: 0.3rem;
+    border-top-right-radius: 0.3rem;
+    
+}
+
+
+.modal-body {
+    position: relative;
+    -webkit-box-flex: 1;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    padding: 1rem;
+    background-color: #efe4b6;
+    margin: 2px 2px 2px 2px;
+    border-radius: 5px;
+}
+
+.modal-title {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 0.8em;
+}
+
+.terms-conditions-thai{
+    font-size: 0.9em;
+    font-weight: 700;
+}
+
+.list-item{
+    color: #16110b;
+    margin-left: 15px;
+    font-size: 0.8em;
+    font-weight: 700;
+}
+
+.btn-secondary{
+    background: linear-gradient(to left, rgb(212, 153, 34) 10%, rgb(224, 188, 56) 30%, rgb(255, 242, 164) 70%, rgb(255, 242, 164) 70%);
+    width: 224px;
+    height: 46px;
+    position: relative;
+    display: block;
+    margin: auto;
+    z-index: 2;
+    border-radius: 5px;
+    padding: 2px;
+    outline: none !important;
+    border: none !important;
+    color: #16110b !important;
+    transition: box-shadow 0.25s;
+ }
+
+ .btn-secondary:hover{
+box-shadow: 0px 0px 5px 4px rgba(0,0,0,0.58) inset;
+-webkit-box-shadow: 0px 0px 5px 4px rgba(0,0,0,0.58)inset;
+-moz-box-shadow: 0px 0px 5px 4px rgba(0,0,0,0.58) inset;
+ }
+
+.inner-btn {
+    background: linear-gradient(to right, rgb(212, 153, 34) 10%, rgb(224, 188, 56) 30%, rgb(255, 242, 164) 70%, rgb(255, 242, 164) 70%);
+    width: 100%;
+    height: 95%;
+    border-radius: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #16110b !important;
+    border: none !important;
+    outline: none !important;
+    font-weight: bold;
+    transition: box-shadow 0.25s;
+
+}
+
+#try-again {
+    position: absolute;
+    z-index: 2;
+    width: 350px;
+    height: auto;
+}
+
+#defeat-try{
+    visibility: hidden;
+}
+
+.wheel-button{
+    border-radius: 5px;
+    height: 45px;
+
+    font-weight: 700;
+    background-color: transparent;
+    padding: 2px;
+    border: none;
+    z-index: 9999;
+    cursor: pointer;
+    color: #16110b !important;
+    transition: box-shadow 0.25s;
+
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
+
+.wheel-button:hover{
+    box-shadow: 0px 0px 5px 4px rgba(0,0,0,0.58) inset;
+    -webkit-box-shadow: 0px 0px 5px 4px rgba(0,0,0,0.58)inset;
+    -moz-box-shadow: 0px 0px 5px 4px rgba(0,0,0,0.58) inset;
+}
+
+.inner-wheel-btn {
+    height: 95%;
+    border-radius: 2px;
+    padding-top: 0px;
+    font-size: 20px;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #16110b !important;
+}
+
+#you-win{
+    width: 560px;
+    height: auto;
+    z-index: 2;
+}
+
+.win-wheel-button {
+    border-radius: 5px;
+    height: 45px;
+
+    font-weight: 700;
+    background-color: transparent;
+    padding: 2px;
+    border: none;
+    z-index: 9999;
+    cursor: pointer;
+    color: #16110b !important;
+    transition: box-shadow 0.25s;
+
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+
+}
+
+.win-wheel-button:hover{
+    box-shadow: 0px 0px 5px 4px rgba(0,0,0,0.58) inset;
+    -webkit-box-shadow: 0px 0px 5px 4px rgba(0,0,0,0.58)inset;
+    -moz-box-shadow: 0px 0px 5px 4px rgba(0,0,0,0.58) inset;
+}
+
+.win-inner-wheel-btn {
+    height: 95%;
+    border-radius: 2px;
+    padding-top: 5px;
+    font-size: 25px;
+    border: none;
+    text-align: center;
+    color: #16110b !important;
+}
+
+
+
+#winDiv{
+    visibility: hidden;
+}
+
+.aff-link{
+    color: inherit;
+    text-decoration: none;
+}
+
+.defeat-try{
+    position: relative;
+}
+
+.second-button{
+    position: absolute;
+    width: 100% !important;
+    height: 100% !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: 0;
+}
+
+.center-pop{
+    position: relative;
+}
+
+
+
+/** End of Modal CSS **/
+
+
+
+
+@media (min-width: 320px){
+ 
+    .child1{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .lucky-win {
+        position: absolute;
+        height: 117px;
+        margin-top: 126px;
+    }
+
+    .child2{
+        bottom: 351px;
+        left: 142px;
+    }
+
+    .roulette-stage {
+        height: 256px;
+        margin-top: 21px;
+        margin-right: 42px;
+    }
+
+    .roulette-spining {
+        height: 168px;
+        margin-top: 20px;
+        margin-right: 45px;
+    }
+    
+   .child3{
+    right: 27px;
+    bottom: 56px;
+    }
+
+    .model-girl {
+        height: 251px;
+        margin-bottom: 0px;
+        margin-right: -17px;
+    }
+
+    .button {
+        width: 248px;
+        height: 41px;
+        bottom: 19px;
+    }
+
+    .inner-button {
+        padding-top: 0px;
+        font-size: 19px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .inner-wheel-btn {
+        height: 95%;
+        border-radius: 2px;
+        padding-top: 0px;
+        font-size: 19px;
+        border: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #16110b !important;
+    }
+    
+    .shadow-div{
+        position: absolute;
+        bottom: 0;
+        height: 200px;
+        width: 100%;
+        background: linear-gradient(to top, rgba(0,0,0,1.0), transparent);
+
+    }  
+    
+    #try-again {
+        width: 228px;
+        position: relative;
+    }
+    
+    .wheel-button {
+        height: 45px;
+        bottom:-46px
+    }
+    
+    .win-wheel-button {
+        height: 45px;
+        bottom: -46px;
+    }
+
+    #you-win {
+        width: 256px;
+        position: relative;
+    }
+
+    .win-inner-wheel-btn {
+        font-size: 19px;
+        padding: 0px;
+        display: flex;        
+        align-items: center;
+        justify-content: center;
+        color: #1d1d1d !important;
+    }
+
+    .remove {
+        width: 15px;
+        height: 15px;
+        margin-top: 13px;
+        margin-right: 5px;
+    }
+}
+
